@@ -23,4 +23,4 @@ Elle offre un système complet pour **ajouter, modifier, supprimer et afficher**
 - **HTML / CSS** : interface utilisateur  
 
 ## Lien GitHub
-[Voir le projet sur GitHub](https://github.com/HadirDridi/GestionProduits)
+[Voir le projet sur GitHub](https://github.com/HadirDridi03/App_Web_Gestion_De_Stock.git)
