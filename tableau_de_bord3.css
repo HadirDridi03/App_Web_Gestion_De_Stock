@@ -1,0 +1,485 @@
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+  scroll-behavior: smooth;
+}
+
+/* Logo */
+.logo1 {
+  display: block;
+  margin: 15px auto;
+  width: 250px;
+  max-width: 100%;
+}
+
+/* Navigation */
+nav {
+  background: linear-gradient(to right, #6cd7c3, #4fb7f1);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+nav a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+nav a:hover, nav a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  outline: none;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: left 0.4s ease;
+}
+
+nav a:hover::after, nav a:focus::after {
+  left: 100%;
+}
+/*nav a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}*/
+/* Style pour l'icône de paramètres */
+.settings-icon {
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.settings-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.settings-icon i {
+  transition: transform 0.3s ease;
+}
+
+.settings-icon:hover i {
+  transform: rotate(30deg);
+}
+
+/* Barre de recherche */
+.search-bar {
+  text-align: right;
+  margin: 20px;
+  padding: 0 20px;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  width: 250px;
+  max-width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border 0.3s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #4fb7f1;
+  box-shadow: 0 0 5px rgba(79, 183, 241, 0.5);
+}
+
+/* Tableau */
+table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th {
+  background-color: #4fb7f1;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  text-align: left;
+}
+
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+  vertical-align: middle;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Statuts */
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.85em;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 90px;
+  text-align: center;
+}
+
+.status.green { 
+  background-color: #2ecc71;
+  box-shadow: 0 2px 5px rgba(46, 204, 113, 0.3);
+}
+
+.status.blue { 
+  background-color: #3498db;
+  box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3);
+}
+
+.status.red { 
+  background-color: #e74c3c;
+  box-shadow: 0 2px 5px rgba(231, 76, 60, 0.3);
+}
+
+/* Conteneur principal */
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+/* Formulaire */
+.login-box {
+  width: 450px;
+  max-width: 100%;
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.login-box h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 22px;
+  color: #2c3e50;
+}
+
+.login-box label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #34495e;
+  font-size: 14px;
+}
+
+.login-box input,
+.login-box select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.login-box input:focus,
+.login-box select:focus {
+  outline: none;
+  border-color: #4fb7f1;
+  box-shadow: 0 0 8px rgba(79, 183, 241, 0.3);
+}
+
+.login-box button {
+  display: block;
+  width: 100%;
+  margin: 30px auto 0 auto;
+  padding: 14px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.login-box button:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  width: 50%;
+  max-width: 600px;
+  position: relative;
+  animation: slideDown 0.4s;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #333;
+}
+
+.modal h2 {
+  margin-bottom: 25px;
+  color: #2c3e50;
+  font-size: 24px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #34495e;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4fb7f1;
+  box-shadow: 0 0 8px rgba(79, 183, 241, 0.3);
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+/* Style pour les liens d'action */
+table td a {
+  margin: 0 8px;
+  text-decoration: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+table td a:first-child {
+  color: #3498db;
+}
+
+table td a:last-child {
+  color: #e74c3c;
+}
+
+table td a:hover {
+  transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+  background-color: #d4f0fd;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer div {
+  display: flex;
+  align-items: center;
+}
+
+.footer i {
+  margin-right: 10px;
+  color: #2c3e50;
+  font-size: 1.1em;
+}
+
+.footer_text2 {
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer_text2:hover {
+  color: #4fb7f1;
+}
+
+.footer_text3 {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-top: 15px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  nav {
+      gap: 20px;
+      padding: 15px 10px;
+  }
+  
+  nav a {
+      font-size: 15px;
+  }
+  
+  .modal-content {
+      width: 85%;
+      padding: 20px;
+  }
+  
+  table {
+      width: 95%;
+  }
+  
+  th, td {
+      padding: 10px 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .search-bar {
+      text-align: center;
+      margin: 15px 0;
+  }
+  
+  .search-bar input {
+      width: 90%;
+  }
+  
+  .login-box {
+      padding: 20px;
+  }
+  
+  .footer {
+      gap: 20px;
+      flex-direction: column;
+  }
+  
+  .modal-content {
+      width: 95%;
+      margin: 20% auto;
+  }
+  
+  table td a {
+      margin: 0 5px;
+      font-size: 1em;
+  }
+}

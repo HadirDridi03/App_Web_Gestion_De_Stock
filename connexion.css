@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    margin-top: 50px;
+    font-family: 'Roboto Slab', serif;}
+
+.logo {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.welcome {
+    color: #54a362;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.welcome span {
+    font-weight: bold;
+}
+
+.login-box {
+    display: inline-block;
+    text-align: left;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+}
+
+.login-box label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #54a362;;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #4ca563;
+}
+
+.links {
+    margin-top: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #666;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+.error-message {
+    color: #ff0000;
+    background-color: #ffebee;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ffcdd2;
+}
